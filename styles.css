@@ -181,7 +181,7 @@ body{color:#3d3d3d; margin:0; padding:0; font-size:18px; font-family: 'Roboto', 
 strong{ font-weight: normal; font-style: normal;}
 a{color:#65ccff; transition: all 0.5s ease 0s; text-decoration:none;}
 a:hover{color:#fff; transition: all 0.5s ease 0s;}
-.container{max-width:1460px; margin:0px auto; position:relative; padding-left:10px; padding-right:10px;}
+.container{max-width:1460px; position:relative; padding-left:10px; padding-right:10px;}
 
 
 
@@ -246,6 +246,7 @@ a:hover{color:#fff; transition: all 0.5s ease 0s;}
 section{
 	margin-bottom: 81px;
 }
+.container{width:100%;}
 /* end GRID  */ 
 
 
@@ -268,10 +269,23 @@ section{
 ul.lang{
 	padding-left: 0;
 	display: inline-block;
+	margin-right: 15px;
+	position: relative;
+    bottom: 17px;
 }
 ul.lang li{
 	display: inline-block;
-	border: 1px solid #ccc;
+	border: 1px solid #e8e8e8;
+	margin-left:5px;
+}
+ul.lang li a{
+	display: block;
+	font-size: 12px;
+    color: #90908f;
+	padding: 6px;
+}
+ul.lang li a:hover{
+	background: rgba(0,0,0,0.1);
 }
 /* end ELEMENTS  */
 
@@ -287,7 +301,38 @@ header{
 header *{
 	display: inline-block;
 }
+header .logo{
+	margin-right: 25px;
+}
+nav ul li a{
+	color: #212220;
+	text-transform: uppercase;
+	padding: 10px;
+	display: block;
+}
+nav{
+	float: right;
+	padding: 16px 0;
+}
 /* end HEADER */
+
+
+
+
+
+/*  SLIDER */
+#slider .content{
+	background-image: url('images/slider.jpg');
+	background-size: cover;
+	background-position: 50% 50%;
+	padding: 86px 62px;
+}
+#slider .caption{
+	background: rgba(255,255,255,0.8);
+	max-width: 385px;
+	padding: 62px 38px;
+}
+/* end  SLIDER */
 
 
 
