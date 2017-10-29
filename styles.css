@@ -252,41 +252,114 @@ section{
 
 
 /* ELEMENTS  */
-.line-through{
-	position: relative;
-}
-.line-through:before {
-    content: "";
-    display: block;
-    width: 100%;
-    height: 1px;
-    background-color: #ebebeb;
-    position: absolute;
-    top: 50%;
-    top: calc(50% - 1px);
-    line-height: 1;
-}
-ul.lang{
-	padding-left: 0;
-	display: inline-block;
-	margin-right: 15px;
-	position: relative;
-    bottom: 17px;
-}
-ul.lang li{
-	display: inline-block;
-	border: 1px solid #e8e8e8;
-	margin-left:5px;
-}
-ul.lang li a{
-	display: block;
-	font-size: 12px;
-    color: #90908f;
-	padding: 6px;
-}
-ul.lang li a:hover{
-	background: rgba(0,0,0,0.1);
-}
+
+	/* separator - line  */
+	.line-through{
+		position: relative;
+	}
+	.line-through:before {
+		content: "";
+		display: block;
+		width: 100%;
+		height: 1px;
+		background-color: #ebebeb;
+		position: absolute;
+		top: 50%;
+		top: calc(50% - 1px);
+		line-height: 1;
+	}
+	/* end  separator - line  */
+
+
+	/* list */
+	ul.lang{
+		padding-left: 0;
+		display: inline-block;
+		margin-right: 15px;
+		position: relative;
+		bottom: 17px;
+	}
+	ul.lang li{
+		display: inline-block;
+		border: 1px solid #e8e8e8;
+		margin-left:5px;
+	}
+	ul.lang li a{
+		display: block;
+		font-size: 12px;
+		color: #90908f;
+		padding: 6px;
+	}
+	ul.lang li a:hover{
+		background: rgba(0,0,0,0.1);
+	}
+	/* end list */
+
+
+
+	/*buttons*/
+	.btn-more{
+		text-align: center;
+		margin-bottom: 10px;
+		margin-top: 10px;
+		color: inherit;
+		text-transform: uppercase;
+		font-size: 12px;
+	}	
+	.btn-more span + .dots{
+		margin-top:10px;
+	}
+	.btn-more.black, .btn-more.black:hover{
+		color: #000;
+	}
+	.btn-more.white, .btn-more.white:hover{
+		color: #fff;
+	}
+	.btn-block{
+		width:100%;
+		text-align: center;
+	}
+	.btn-block .dots{
+		margin: auto;
+	}
+	 /* end buttons*/
+	 
+	 
+	 /* icon */
+	 .dots{
+		height: 10px;
+		width: 35px;
+		background-size: contain;
+		background-repeat: no-repeat;
+		content: ' ';
+		display: block;
+	 }
+	 .black .dots{
+		background-image: url('images/dott-black.svg');
+	}
+	.white .dots{
+		background-image: url('images/dott-white.svg');
+	}
+	.icon-dir{
+		height: 12px;
+		width: 20px;
+		background-image: url('images/icon-dir.svg');
+		background-size: contain;
+		background-repeat: no-repeat;
+		content: ' ';
+		display: inline-block;
+	}
+	  /* end  icon */
+	  
+	 
+
+	.strong{
+		font-weight: 700;
+	}
+	.thin{ 
+		font-weight: 300;
+	}
+
 /* end ELEMENTS  */
 
 
@@ -309,6 +382,13 @@ nav ul li a{
 	text-transform: uppercase;
 	padding: 10px;
 	display: block;
+	border-bottom: 2px solid #fff;
+	font-size:14px;
+	font-weight: 600;
+}
+nav ul li a:hover{
+	color: #ccc;
+	border-bottom: 2px solid #eee;
 }
 nav{
 	float: right;
@@ -332,7 +412,69 @@ nav{
 	max-width: 385px;
 	padding: 62px 38px;
 }
+#slider .title{
+	font-size: 42px;
+	text-transform: uppercase;
+	font-weight: 100;
+}
+#slider .title .strong{
+	display:block;
+	font-weight: 700;
+}
 /* end  SLIDER */
+
+
+
+
+/* WHAT WE DO */
+#what-we-do .element{
+	width: 33.33333%;
+	float: left;
+	padding: 33px 60px 27px 43px;
+}
+#what-we-do .element:nth-child(1){background: #e8e8e8;}
+#what-we-do .element:nth-child(2){background: #90908f;}
+#what-we-do .element:nth-child(3){background: #7a7a79;}
+#what-we-do .element:nth-child(4){background: #a6a7a6;}
+#what-we-do .element:nth-child(5){background: #212220;}
+#what-we-do .element:nth-child(6){background: #bcbcbc;}
+/* end WHAT WE DO */
+
+
+
+
+/* LAST PROJECT */
+#last-project .element{
+	width: 33.33333%;
+	cursor: pointer;
+	float: left;
+	position: relative;
+	overflow: hidden;
+	display: flex;
+	color: #fff;
+	text-transform: uppercase;
+}
+#last-project .element a{
+	color: inherit;
+}
+#last-project .element .title{
+	font-size: 32px;
+	
+}
+#last-project .element:hover .content{
+	background: rgba(0,0,0,0.01);
+}
+#last-project .element .content{
+	position: relative;
+	background: rgba(0,0,0,0.1);
+	padding: 20px 72px 40px  31px;
+	width:100%;
+}
+#last-project .element img{
+	position: absolute;
+}
+/* end LAST PROJECT */
+
 
 
 
@@ -341,12 +483,14 @@ nav{
 footer{
 	padding: 53px 0;
 	text-align: center;
+	margin-bottom: 100px;
 }
 footer img{
 	padding: 10px;
 	background: #fff;
 	position: absolute;
 	top: -30px;
+	left: calc(50% - 45px);
 }
 /* end FOOTER */
 
