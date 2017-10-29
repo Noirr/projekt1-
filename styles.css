@@ -246,6 +246,16 @@ a:hover{color:#fff; transition: all 0.5s ease 0s;}
 		padding-bottom: 20px;
 	}
 	/* list */
+	.list-address li{
+		text-transform: uppercase;
+		font-weight: 200;
+		margin: 20px 0;
+		font-size: 12px;
+	}
+	.list-social li{
+		display: inline-block;
+		margin-right: 5px;
+	}
 	ul.lang{
 		padding-left: 0;
 		display: inline-block;
@@ -268,6 +278,20 @@ a:hover{color:#fff; transition: all 0.5s ease 0s;}
 		background: rgba(0,0,0,0.1);
 	}
 	/*buttons*/
+	.btn{
+		text-transform: uppercase;
+		border: 0;
+		padding: 10px 20px;
+		cursor: pointer;
+	}
+	.btn-black{
+		color: #fff;
+		background: #000;
+	}
+	.btn-black:hover{
+		color: #fff;
+		background: #111;
+	}
 	.btn-more{
 		text-align: center;
 		margin-bottom: 10px;
@@ -329,6 +353,23 @@ a:hover{color:#fff; transition: all 0.5s ease 0s;}
 		background-repeat: no-repeat;
 		content: ' ';
 		display: inline-block;
+	}
+	.icon-facebook, .icon-linked, .icon-printerest{
+		height: 32px;
+		width: 32px;
+		background-size: contain;
+		background-repeat: no-repeat;
+		content: ' ';
+		display: inline-block;
+	}
+	.icon-facebook{
+		background-image: url('images/icon-facebook.png');
+	}
+	.icon-linked{
+		background-image: url('images/icon-linked.png');
+	}
+	.icon-printerest{
+		background-image: url('images/icon-printerest.png');
 	}
 	.block-arrows{
 		position: relative;
@@ -490,7 +531,8 @@ nav{
 
 /* FOOTER */
 footer.container{
-	padding: 53px 0;
+	padding-top: 53px;
+	padding-bottom: 53px;
 	text-align: center;
 	margin-bottom: 100px;
 }
@@ -678,7 +720,7 @@ footer img{
 .our-team .avatar, .our-team .caption{
 	float: left;
 }
-.our-team .element span{
+.our-team span{
 	display: block;
 }
 .our-team .caption{
@@ -686,6 +728,7 @@ footer img{
 	padding-left: 10px;
 	padding-top: 20px;
 	font-size: 11px;
+	min-width: 150px;
 }
 .our-team .avatar{
 	height:125px;
@@ -737,3 +780,70 @@ footer img{
  }
  
  
+ 
+ 
+/* SITE: CONTACT  */
+.contact-form .form-group .form-control{
+	background: #fff;
+	color: #000;
+	font-weight: 500;
+	padding: 18px 8px;
+	width:100%;
+	margin-bottom: 11px;
+	border: 0;
+	font-size: 14px;
+}
+.contact-form .btn{
+	float:right;
+	padding: 25px 84px;
+}
+.contact-form .form-control::placeholder{
+	text-transform: uppercase;
+	color: #000;
+	font-weight: 600;
+	font-size: 12px;
+}
+#contact .col{
+	padding: 30px 55px;
+}
+#contact .line-through{
+	padding: 21px 0 21px;
+}
+#contact .col:nth-child(1){
+	background: #7a7a79;
+	max-width: 390px;
+}
+#contact .col:nth-child(2){
+	background: #212220;
+}
+#contact{
+	color: #fff;
+}
+#contact .title{
+	margin-bottom: 0;
+	padding-bottom: 0;
+	margin-bottom: -5px
+}
+#contact .our-team .caption{
+	padding-top: 10px;
+	min-height: 125px;
+	height: 100%;
+    display: table;
+}
+#contact .list-social{
+	display: table-row;
+    vertical-align: bottom;
+    height: 1px;
+}
+@media screen and (max-width: 800px){
+	#contact .col:nth-child(1){
+		max-width: none;
+	}
+}
+
+
+
+
+
+
+
