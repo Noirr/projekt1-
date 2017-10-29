@@ -71,7 +71,7 @@
 			</h3>
 			<div class="line-through"></div>
 			<p>
-			<strong class="strong">TheDesignGroup</strong> is a team of people providing as well architectural & marketing services for commercial RE for years - <span class="strong">especially Office buildings</span>.
+			<strong class="strong">TheDesignGroup</strong> is a team of people providing as well architectural &amp; marketing services for commercial RE for years - <span class="strong">especially Office buildings</span>.
 			</p>
 			<a href="#" class="btn-more black">
 				<span class="dots"></span>
@@ -177,61 +177,61 @@
 
 
 <!-- MAIN LAST PROJECT  -->
-<section id="last-project" class="container grid"> 
+<section class="container" id="last-project" >
+<div class="flexbox" >
 
-	
-		<div class="element">
-			<img src="images/img01.jpg" class="img-responsive"/>
-			<div class="content">
-			<h3 class="title">
-				<span class="strong">avon</span>
-			</h3>
-			<div class="line-through"></div>
-			<a class="btn-link" href="#">
-				<span class="icon-dir"></span>Office Buildings
-			</a>
-			<a href="#" class="btn-more white">
-				<span class="dots"></span>
-			</a>
-			</div>
-		</div>
-		
-		<div class="element">
-			<img src="images/img02.jpg" class="img-responsive"/>
-			<div class="content">
-			<h3 class="title">
-				<span class="strong">thyssenkrupp</span>
-			</h3>
-			<div class="line-through"></div>
-			<a class="btn-link" href="#">
-				<span class="icon-dir"></span>Office Buildings
-			</a>
-			<a href="#" class="btn-more white">
-				<span class="dots"></span>
-			</a>
-			</div>
-		</div>
-		
-		<div class="element">
-			<img src="images/img03.jpg" class="img-responsive"/>
-			<div class="content">
-			<h3 class="title">
-				<span class="strong">brown forman</span>
-			</h3>
-			<div class="line-through"></div>
-			<a class="btn-link" href="#">
-				<span class="icon-dir"></span>Office Buildings
-			</a>
-			<a href="#" class="btn-more white">
-				<span class="dots"></span>
-			</a>
-			</div>
-		</div>
-		
-		
-		<div class="clearfix"></div>
-		
-		
+   <div class="col">
+	<img src="images/img01.jpg"/>
+	<div class="content">
+	<h3 class="title">
+		<span class="strong">avon</span>
+	</h3>
+	<div class="line-through"></div>
+	<a class="btn-link" href="#">
+		<span class="icon-dir"></span>Office Buildings
+	</a>
+	<a href="#" class="btn-more white">
+		<span class="dots"></span>
+	</a>
+	</div>
+  </div>
+  
+  <div class="col">
+	<img src="images/img02.jpg" />
+	<div class="content">
+	<h3 class="title">
+		<span class="strong">thyssenkrupp</span>
+	</h3>
+	<div class="line-through"></div>
+	<a class="btn-link" href="#">
+		<span class="icon-dir"></span>Office Buildings
+	</a>
+	<a href="#" class="btn-more white">
+		<span class="dots"></span>
+	</a>
+	</div>
+  </div>
+  
+  
+  <div class="col">
+	<img src="images/img03.jpg" />
+	<div class="content">
+	<h3 class="title">
+		<span class="strong">brown forman</span>
+	</h3>
+	<div class="line-through"></div>
+	<a class="btn-link" href="#">
+		<span class="icon-dir"></span>Office Buildings
+	</a>
+	<a href="#" class="btn-more white">
+		<span class="dots"></span>
+	</a>
+	</div>
+  </div>
+  
+ </div>
+
+
 		<div class="btn-block">
 			<a href="#" class="btn-more black">
 				<span class="strong">More</span> 
@@ -239,10 +239,12 @@
 				<span class="dots"></span>
 			</a>
 		</div>
-
 		
 </section>
-<!-- MAIN LAST PROJECT  -->	
+<!-- end MAIN LAST PROJECT  -->	
+
+
+
 
 
 
@@ -267,18 +269,28 @@
 <script>
 var $elements_grid = function()
 {
-
 	$(document).find(".grid").each(function(){
+	
+	
 		var $mh = 0;
-		$(this).children(".element").css('min-height', 'auto');
+		$(this).children(".element").css('height', 'auto');
+		
+		
 		$(this).children(".element").each(function(){
 			$h = $(this).height();
-			if($mh < $h){$mh = $h;}
+			if($mh < $h){
+				$mh = $h;
+			}
+			console.log($h+' | '+$mh);
 		});
-		$(this).children(".element").css('min-height', $mh);
+		
+		$mh = $mh  + 60;
+		$(this).children(".element").css('height', $mh);
+		console.log(' max '+$mh);
 		var $mh = 0;
+		
+		
 	});
-	
 }
 $(document).ready(function(){
     $elements_grid();
